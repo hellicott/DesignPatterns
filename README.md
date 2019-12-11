@@ -4,10 +4,10 @@
 - [Singleton](#singleton)
 
 [Structural Design Patterns](#structural)
-- [Thing 1](Link 1)
+
 
 [Behavioural Design Patterns](#behavioural)
-- [Thing 1](link 1)
+
 
 ## Creational
 ### Singleton
@@ -32,13 +32,25 @@ benefit from having a global single instance of this class. You can see this exa
 implemented in the code
 
 #### When is it *not* useful?
-It shouldn't be used as a global variable. Whilst it acts like one, you should really be asking yourself
+It shouldn't be used as a global variable. Whilst it acts a bit like one, you should really be asking yourself
 > Why do I want to make this thing global?
 
 Not 
 > How can I make this thing global?
 
 This is a code smell, implying bad design. 
+
+This pattern is also not necessarily appropriate in multithreaded programs which are asynchronous,
+it could still create multiple instances.
+
+### Builder
+[[code](builder)]
+
+#### What is it?
+
+#### When is it useful?
+
+#### When is it *not* useful?
 
 [[Back To Top](#design-patterns)]
 ## Structural
@@ -50,11 +62,13 @@ This is a code smell, implying bad design.
 
 [[Back To Top](#design-patterns)]
 
-# References
-[source making](https://sourcemaking.com/design_patterns)
+# References/further reading
+[source making](https://sourcemaking.com/design_patterns) contains a good reference for many design patterns
 
-[geeks for geeks](https://www.geeksforgeeks.org/software-design-patterns/)
+[geeks for geeks](https://www.geeksforgeeks.org/software-design-patterns/) had some good base knowledge, as well as 
+example implementations of many patterns
 
-[toptal](https://www.toptal.com/python/python-design-patterns)
+[toptal](https://www.toptal.com/python/python-design-patterns) has useful python implementations of design patterns
+(most I found were in Java)
 
 [[Back To Top](#design-patterns)]
