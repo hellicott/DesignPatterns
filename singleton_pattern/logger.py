@@ -1,10 +1,11 @@
 class Logger:
-    logger_instance = None
+    _logger_instance = None
 
-    def get_instance(self):
-        if self.logger_instance is None:
-            self.logger_instance = Logger()
-        return self.logger_instance
+    @staticmethod
+    def get_instance():
+        if Logger._logger_instance is None:
+            Logger._logger_instance = Logger()
+        return Logger._logger_instance
 
     def log(self, message):
         # save message to file
