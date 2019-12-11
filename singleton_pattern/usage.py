@@ -15,3 +15,9 @@ class AnotherUsage:
         # do stuff
         Logger.get_instance().log("another message")
         # do some other stuff
+
+
+a = Usage()
+b = AnotherUsage()
+a.main()
+b.main()

@@ -4,9 +4,10 @@ class Logger:
     @staticmethod
     def get_instance():
         if Logger._logger_instance is None:
+            print("creating new instance")
             Logger._logger_instance = Logger()
         return Logger._logger_instance
 
     def log(self, message):
         # save message to file
-        pass
+        print("logging: {}".format(message))
