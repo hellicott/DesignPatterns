@@ -1,5 +1,7 @@
 # Design Patterns
 ## Contents
+[Why use design patterns?](#why-use-design-patterns)
+
 [Creational Design Patterns](#creational)
 - [Singleton](#singleton)
 
@@ -8,6 +10,34 @@
 
 [Behavioural Design Patterns](#behavioural)
 
+## Why use design patterns?
+Design patterns can help us to write code in a more readable and maintainable way. When it
+comes to python, they can also help us write in a more '*pythonic*' way and stick to the 
+'*Zen of Python*' to write code which is both elegant and useful.
+
+```
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
 
 ## Creational
 ### Singleton
@@ -47,8 +77,13 @@ it could still create multiple instances.
 [[code](builder)]
 
 #### What is it?
+The builder pattern is a way of separating the construction of a complex object from the rest of the class.
 
 #### When is it useful?
+It is often used when a constructor would require a lot of arguments, especially if they are of the same type.
+It is easy to forget the order in which you need to provide the arguments and it is also not very readable.
+When you have some parameters which are optional, this can add more complexity to a task as you may require 
+additional constructors. The need for these is removed if you use the builder pattern
 
 #### When is it *not* useful?
 
