@@ -81,11 +81,20 @@ The builder pattern is a way of separating the construction of a complex object 
 
 #### When is it useful?
 It is often used when a constructor would require a lot of arguments, especially if they are of the same type.
-It is easy to forget the order in which you need to provide the arguments and it is also not very readable.
-When you have some parameters which are optional, this can add more complexity to a task as you may require 
-additional constructors. The need for these is removed if you use the builder pattern
+It is easy to forget the order in which you need to provide the arguments, meaning it won't fail during compilation
+but you are likely to get a runtime error. It is also hard to understand when there are many arguments and you
+don't remember what they all are.
+
+Another situation is when you have some parameters which are optional, this can add more complexity to a task 
+as you may require additional constructors. One way to solve this would be to have setters, but if they have 
+a particular order or compulsory parameters then you could end up with an object which is only half constructed 
+or constructed in an incompatible way.
 
 #### When is it *not* useful?
+One drawback of the builder pattern is that it adds a lot more code to the solution. Sometimes it just isn't
+necessary. However if you are writing code which is going to be read a lot by others and needs to be maintained
+I think is is worth it.
+
 
 [[Back To Top](#design-patterns)]
 ## Structural
